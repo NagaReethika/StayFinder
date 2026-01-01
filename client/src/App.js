@@ -1,15 +1,17 @@
 import './App.css';
 import Navbar from './components/Navbar';
+import {BrowserRouter , Routes , Route , Link} from 'react-router-dom'
+import HomeScreen from './screens/HomeScreen';
 
 function App() {
   return (
-    <div>
+    <div className='App'>
 
       {/* Use Navbar Component */}
       <Navbar />
 
       {/* Hero Section */}
-      <header className="hero">
+      {/* <header className="hero">
         <h1>India’s Largest Hourly Hotels</h1>
         <p>Book short stays for 3, 7, 11 hours based on your needs.</p>
 
@@ -24,7 +26,14 @@ function App() {
           </select>
           <button className="search-btn">Find Hourly Hotels</button>
         </div>
-      </header>
+      </header> */}
+      <BrowserRouter>
+      <Routes>
+          <Route path='/home' element={<HomeScreen />} />
+        </Routes>
+
+
+      </BrowserRouter>
 
     </div>
   );

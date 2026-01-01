@@ -1,54 +1,36 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4">
-            
-            {/* Logo */}
-            <Link className="navbar-brand fw-bold text-warning" to="/">
-                Stay Finder
-            </Link>
+        <div>
+            <nav className="navbar navbar-expand-lg">
+                <a className="navbar-brand" href="#">Stay Finder</a>
 
-            {/* Toggle Button (Mobile) */}
-            <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
-                <span className="navbar-toggler-icon"></span>
-            </button>
+                <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
 
-            {/* Nav Links */}
-            <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul className="navbar-nav">
-
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/">
-                            Home
-                        </Link>
-                    </li>
-
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/login">
-                            Login
-                        </Link>
-                    </li>
-
-                    <li className="nav-item">
-                        <Link className="btn btn-warning text-white ms-3" to="/register">
-                            Sign Up
-                        </Link>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-    );
+                <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+                        <li className="nav-item active">
+                            <a className="nav-link" href="#">Register</a>
+                        </li>
+                        <li className="nav-item">
+                            <a className="nav-link" href="#">Log-in</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    )
 }
 
-export default Navbar;
+export default Navbar
