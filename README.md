@@ -1,10 +1,10 @@
-# 🏨 StayFinder
+#  StayFinder
 
 StayFinder is a MERN Stack web application that allows users to browse and book hourly hotel rooms based on their needs.
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 ### Frontend
 - React.js
